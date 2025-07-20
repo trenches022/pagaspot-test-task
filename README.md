@@ -24,3 +24,4 @@ Clone the repository and install dependencies:
 git clone https://github.com/trenches022/pagaspot-test-task.git
 cd pagaspot-test-task
 npm install
+npx expo start
