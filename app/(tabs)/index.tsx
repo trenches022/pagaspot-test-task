@@ -6,7 +6,7 @@ import ParallaxScrollView from '@/components/ParallaxScrollView';
 import { ThemedText } from '@/components/ThemedText';
 import { ThemedView } from '@/components/ThemedView';
 import Calendar from '@/components/calendar/Calendar';
-import moment from 'moment';
+import dayjs from 'dayjs';
 
 export default function HomeScreen() {
   return (
@@ -23,30 +23,11 @@ export default function HomeScreen() {
         <HelloWave />
       </ThemedView>
 
-
       <Calendar
-        from={moment("2025-08-01")}
+        from={dayjs("2025-08-01")}
         offerDays={['2025-08-10','2025-08-11','2025-08-12','2025-08-15','2025-08-17','2025-08-18']}
         orderDays={[]}
       />
-
-      <ThemedView style={styles.stepContainer}>
-        <ThemedText type="subtitle">Twoje zadanie</ThemedText>
-        <ThemedText>
-          Usprawnij kalendarz powyżej według instrukcji z maila.
-        </ThemedText>
-        <ThemedText>
-          W components/calendar/Calendar.tsx znajdziesz kod które trzeba rozwinąć.
-        </ThemedText>
-        
-        <ThemedText>
-          Zwróć uwagę na TODO w komentarzach, zrób tyle ile uważasz.
-          Poświęć na to zadanie max 1.5 godziny
-        </ThemedText>
-        <ThemedText>
-          Ten tekst możesz usunąć
-        </ThemedText>
-      </ThemedView>
 
     </ParallaxScrollView>
   );
